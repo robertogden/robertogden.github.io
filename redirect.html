@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loading</title>
+
+  <script type="text/javascript">
+    var query = new URLSearchParams(window.location.search);
+
+    var delay = 3000;
+    if (query.has('delay')) {
+      delay = Number(query.get('delay'));
+    }
+
+    var loc = 'https://robertogden.github.io/index.html';
+    if (query.has('loc')) {
+      loc = query.get('loc');
+    }
+
+    window.setTimeout(function(){
+      window.location.href = loc;
+    }, delay);
+  </script>
+</head>
+<body>
+<pre>
+Loading, please be patient.
+</pre>
+</body>
+</html>
